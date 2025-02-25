@@ -13,9 +13,67 @@
 	<link rel="stylesheet" href="./assets/css/global-footer.css">
 	<link rel="stylesheet" href="./assets/css/accesibility.css">
 	<link rel="stylesheet" href="./assets/css/index.css">
+
+	<link rel="stylesheet" href="./assets/css/rooms-and-suites.css">
 	<link rel="shortcut icon" href="" type="image/x-icon">
+
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+<style>
+/* Default: Show Grid, Hide Swiper */
+.cards-container {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.card {
+	width: 30%;
+	max-width: 400px;
+	text-align: center;
+	padding: 20px;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.swiper {
+	display: none; /* Hide Swiper on large screens */
+}
+
+/* Mobile View: Hide Grid, Show Swiper */
+@media (max-width: 768px) {
+	.cards-container {
+		display: none; /* Hide static grid on mobile */
+	}
+
+	.swiper {
+		display: block; /* Show Swiper */
+		width: 100%;
+		padding: 20px 0;
+	}
+
+	.swiper-slide {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.card {
+		width: 90%;
+	}
+}
+
+
+</style>
+
+
 </head>
 <body class="scroll-bar">
+
 	<div id="loader">
 		<svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
@@ -45,9 +103,9 @@
 							<a class="header-nav-link header-active" href="index.html">Home</a>
 						</li>
 						<li class="header-nav-list"><a class="header-nav-link"
-								href="rooms-and-suites.html">Rooms and Suites</a></li>
+								href="#rooms">Rooms and Suites</a></li>
 						<!-- <li class="header-nav-list"><a class="header-nav-link" href="facilities.html">Facilities</a></li> -->
-						<li class="header-nav-list"><a class="header-nav-link" href="contact-page.html">Contact Us</a></li>
+						<li class="header-nav-list"><a class="header-nav-link" href="#Contact-section">Contact Us</a></li>
 						<li class="header-nav-list"><a class="header-btn header-btn-custom" href="https://wa.me/+917994729412">BOOK NOW</a></li>
 					</ul>
             
@@ -135,6 +193,188 @@
 	</div>
 
 	</div>
+
+
+
+
+
+	<section id="rooms">
+        <div class="container">
+
+            <!-- Top Text -->
+            <div class="page-header-container">
+                <h2 class="page-header">Star Hotel Rooms</h2>
+                <hr />
+                <p class="page-sub-header">
+                    Get the most of our hotel specials. Enjoy the modern <br>
+                    comfort and panoramic view
+                </p>
+            </div>
+
+            <!-- Special offers section -->
+            <section class="special-offers">
+                <div class="row center-lg">
+                    <div class="col image-col right-marg">
+                        <img src="assets/img/hotel-1.webp" alt="room-image" class="small-image">
+                        <img src="assets/img/hotel-2.webp" alt="room-image" class="small-image">
+                        <img src="assets/img/hotel-3.webp" alt="room-image" class="small-image">
+                        <div class="side-by-side-container">
+                            <div class="large-image-container">
+                                <img src="assets/img/hotel-4-large.webp" alt="room-image-large" class="large-image">
+                            </div>
+                            <section class="stacked-image-container">
+                              <div><img src="assets/img/hotel-5.webp" alt="room-image" class="small-image"></div>
+                              <div><img src="assets/img/hotel-6.webp" alt="room-image" class="small-image"></div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h3 class="offers-title">Special Offers</h3>
+                        <p class="offers-sub-title">
+                            Get 10% discount off this city view- standard room. <br> Offers valid till june 31st 2020
+                        </p>
+                        <ul class="offers-list">
+                            <li>
+                                <div>
+                                    <img src="assets/img/check-square.svg" alt="tick" class="list-icon">
+                                    <p class="list-text">Free Wi-Fi Service</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="assets/img/check-square.svg" alt="tick" class="list-icon">
+                                    <p class="list-text">Best Rate Guarantee</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="assets/img/check-square.svg" alt="tick" class="list-icon">
+                                    <p class="list-text">Free DSTV Access</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-fill btn-large">View More</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rooms -->
+            <section class="rooms-section">
+                <!-- <div class="row room-section-header-container"> -->
+                    <div class="col col-3">
+                        <h4 class="room-section-header active-header" id="standard-room">Rooms</h4>
+                    </div>
+                    <!-- <div class="col col-3">
+                        <h4 class="room-section-header" id="executive-room">Executive Rooms</h4>
+                    </div> -->
+                    <!-- <div class="col col-3">
+                        <h4 class="room-section-header" id="king-room">King Suites</h4>
+                    </div> -->
+                <!-- </div> -->
+                <div class="row center-lg">
+                    <div class="rooms col col-2">
+                        <img src="https://res.cloudinary.com/start-ng/image/upload/v1591638448/Rectangle_42_nastdj.png"
+                            alt="" class="rooms-img">
+                        <h3 class="room-title">Standard Economic Single</h3>
+                        <p class="room-text">Designed specifically for Practicality and <br> comfort</p>
+                        <div>
+                            <div class="details-container">
+                                <img src="assets/img/check-square.svg" alt="tick" class="list-icon">
+                                <p class="list-text">2 Persons</p>
+                            </div>
+                            <div class="details-container">
+                                <img src="assets/img/check-square.svg" alt="tick" class="list-icon">
+                                <p class="list-text">1 Kingsize bed</p>
+                            </div>
+                        </div>
+                        <p class="amount-text">NGN25,000 Per Night</p>
+                        <div class="buttons-container">
+                            <!-- <a href="#" class="btn btn-ghost">View More</a> -->
+                            <a href="https://timbu.com/search?query=hotel" class="btn btn-fill">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="rooms col col-2">
+                        <img src="https://res.cloudinary.com/start-ng/image/upload/v1591638449/Rectangle_43_d9eepu.png"
+                            alt="" class="rooms-img">
+                        <h3 class="room-title">Standard Economic Single</h3>
+                        <p class="room-text">Designed specifically for Practicality and <br> comfort</p>
+                        <div>
+                            <div class="details-container">
+                                <img src="assets/img/check-square.svg" alt="tick" class="list-icon">
+                                <p class="list-text">2 Persons</p>
+                            </div>
+                            <div class="details-container">
+                                <img src="assets/img/bed.png" alt="tick" class="list-icon">
+                                <p class="list-text">1 Kingsize bed</p>
+                            </div>
+                        </div>
+                        <p class="amount-text">NGN35,000 Per Night</p>
+                        <div class="buttons-container">
+                            <!-- <a href="#" class="btn btn-ghost">View More</a> -->
+                            <a href="https://timbu.com/search?query=hotel" class="btn btn-fill">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="rooms col col-2">
+                        <img src="https://res.cloudinary.com/start-ng/image/upload/v1591638448/Rectangle_44_anerdv.png"
+                            alt="" class="rooms-img">
+                        <h3 class="room-title">Standard Economic Single</h3>
+                        <p class="room-text">Designed specifically for Practicality and <br> comfort</p>
+                        <div>
+                            <div class="details-container">
+                                <img src="assets/img/check-square.svg" alt="tick" class="list-icon">
+                                <p class="list-text">2 Persons</p>
+                            </div>
+                            <div class="details-container">
+                                <img src="assets/img/bed.png" alt="tick" class="list-icon">
+                                <p class="list-text">1 Kingsize bed</p>
+                            </div>
+                        </div>
+                        <p class="amount-text">NGN45,000 Per Night</p>
+                        <div class="buttons-container">
+                            <!-- <a href="#" class="btn btn-ghost">View More</a> -->
+                            <a href="https://timbu.com/search?query=hotel" class="btn btn-fill">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="rooms col col-2">
+                        <img src="https://res.cloudinary.com/start-ng/image/upload/v1591638449/Rectangle_45_mtl458.png"
+                            alt="" class="rooms-img">
+                        <h3 class="room-title">Standard Economic Single</h3>
+                        <p class="room-text">Designed specifically for Practicality and <br> comfort</p>
+                        <div>
+                            <div class="details-container">
+                                <img src="assets/img/check-square.svg" alt="tick" class="list-icon">
+                                <p class="list-text">2 Persons</p>
+                            </div>
+                            <div class="details-container">
+                                <img src="assets/img/bed.png" alt="tick" class="list-icon">
+                                <p class="list-text">1 Kingsize bed</p>
+                            </div>
+                        </div>
+                        <p class="amount-text">NGN50,000 Per Night</p>
+                        <div class="buttons-container">
+                            <!-- <a href="#" class="btn btn-ghost">View More</a> -->
+                            <a href="https://timbu.com/search?query=hotel" class="btn btn-fill">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<section class="special-offers">
 		<!-- Top Text -->
 		<div class="page-header-container">
@@ -188,63 +428,75 @@
 		</section>
 
 	<!-- Client Reviews -->
-	<div class="review-container">
-		<div class="review-header">
-			<h2 class="review-title">
-				Client Reviews
-			</h2>
-			<hr class="horizontal">
-			<p class="">We are very proud of the services we offer to our customers.<br>Read every word from our happy customers.</p>
-		</div>
-		<div class="cards-container">
-				<div class="card">
-					<img src="./assets/img/tlta/testmonials/Testmonials Icon.png" alt="" class="card-avi">
-					<h2 class="card-title">
-						Arjun M
-					</h2>
-					<!-- <h3 class="card-subtitle">
-						Lagos, Nigeria.
-					</h3> -->
-					<p class="card-desc">TLTA Rooms was clean, comfortable, and budget-friendly. The staff was super helpful, and the booking process was smooth. Highly recommended!</p>
-				</div>
-				<div class="card">
-					<img src="./assets/img/tlta/testmonials/Testmonials Icon.png" alt="" class="card-avi">
-					<h2 class="card-title">
-						Sneha R.
-					</h2>
-					<!-- <h3 class="card-subtitle">
-							Lagos, Nigeria.
-					</h3> -->
-					<p class="card-desc">A great place for a short stay! The room had all the essentials, and the location was very convenient. Definitely worth the price.</p>
-				</div>
-				<div class="card">
-					<img 
-						src="./assets/img/tlta/testmonials/Testmonials Icon.png" 
-						alt="" 
-						class="card-avi">
-					<h2 class="card-title">
-						Rahul K
-					</h2>
-					<!-- <h3 class="card-subtitle">
-						Lagos, Nigeria.
-					</h3> -->
-					<p class="card-desc">If you're looking for an affordable and comfortable place, TLTA Rooms is perfect. No frills, just a great stay with friendly service.</p>
-				</div>
-				
-
-			</div>
+	<!-- Client Reviews -->
+<div class="review-container">
+	<div class="review-header">
+		<h2 class="review-title">Client Reviews</h2>
+		<hr class="horizontal">
+		<p>We are very proud of the services we offer to our customers.<br>Read every word from our happy customers.</p>
 	</div>
 
+	<!-- Grid View (for Desktop) -->
+	<div class="cards-container">
+		<div class="card">
+			<img src="./assets/img/tlta/testmonials/Testmonials Icon.png" alt="" class="card-avi">
+			<h2 class="card-title">Arjun M</h2>
+			<p class="card-desc">TLTA Rooms was clean, comfortable, and budget-friendly. The staff was super helpful, and the booking process was smooth. Highly recommended!</p>
+		</div>
+		<div class="card">
+			<img src="./assets/img/tlta/testmonials/Testmonials Icon.png" alt="" class="card-avi">
+			<h2 class="card-title">Sneha R.</h2>
+			<p class="card-desc">A great place for a short stay! The room had all the essentials, and the location was very convenient. Definitely worth the price.</p>
+		</div>
+		<div class="card">
+			<img src="./assets/img/tlta/testmonials/Testmonials Icon.png" alt="" class="card-avi">
+			<h2 class="card-title">Rahul K</h2>
+			<p class="card-desc">If you're looking for an affordable and comfortable place, TLTA Rooms is perfect. No frills, just a great stay with friendly service.</p>
+		</div>
+	</div>
+
+	<!-- Swiper View (for Mobile) -->
+	<div class="swiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="card">
+					<img src="./assets/img/tlta/testmonials/Testmonials Icon.png" alt="" class="card-avi">
+					<h2 class="card-title">Arjun M</h2>
+					<p class="card-desc">TLTA Rooms was clean, comfortable, and budget-friendly. The staff was super helpful, and the booking process was smooth. Highly recommended!</p>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="card">
+					<img src="./assets/img/tlta/testmonials/Testmonials Icon.png" alt="" class="card-avi">
+					<h2 class="card-title">Sneha R.</h2>
+					<p class="card-desc">A great place for a short stay! The room had all the essentials, and the location was very convenient. Definitely worth the price.</p>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="card">
+					<img src="./assets/img/tlta/testmonials/Testmonials Icon.png" alt="" class="card-avi">
+					<h2 class="card-title">Rahul K</h2>
+					<p class="card-desc">If you're looking for an affordable and comfortable place, TLTA Rooms is perfect. No frills, just a great stay with friendly service.</p>
+				</div>
+			</div>
+		</div>
+		<!-- Pagination Dots -->
+		<div class="swiper-pagination"></div>
+	</div>
+</div>
 
 
 
 
 
 
-	<section class="contact-container">
+
+
+
+	<section id="Contact-section" class="contact-container">
 		<div class="contact-info">
-			<h2>Contact Us</h2>
-			<p><i class="fas fa-map-marker-alt"></i> Location: 123 Street, City, Country</p>
+			<!-- <h2>Location</h2> -->
+			<!-- <p><i class="fas fa-map-marker-alt"></i> Location: 123 Street, City, Country</p>
 			<p><i class="fas fa-phone"></i> Phone: +91 79947 29412</p>
 			<p><i class="fas fa-envelope"></i> Email: info@tltarooms.com</p>
 			<div class="social-links">
@@ -252,7 +504,7 @@
 				<a href="#"><i class="fab fa-twitter"></i></a>
 				<a href="#"><i class="fab fa-instagram"></i></a>
 				<a href="#"><i class="fab fa-linkedin"></i></a>
-			</div>
+			</div> -->
 			<div class="map-container">
 				<iframe 
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434508616!2d144.9537353153156!3d-37.81627917975132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218cee40!2sMelbourne%2C+Australia!5e0!3m2!1sen!2sin!4v1614156745509!5m2!1sen!2sin" 
@@ -286,8 +538,13 @@
 		<div class="footer-container">
 			<nav class="footer-nav">
 				<div class="footer-description">
-					<h3 class="footer-description-title">Star Hotels</h3>
-					<p>Hospitality and Comfort are our watchwords</p>
+					<div class="footer-logo">
+						<a href="index.html">
+							<img width="141px" src="./assets/img/tlta/logo.png"
+								alt="star hotels logo">
+						</a>
+					</div>
+				
 				</div>
 				<div class="footer-contact-us">
 					<h3 class="footer-description-title">Contact Us</h3>
@@ -326,6 +583,22 @@
 			</nav>
 		</div>
 	</footer>
+
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+	new Swiper(".swiper", {
+		loop: true,
+		spaceBetween: 20,
+		slidesPerView: 1,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+	});
+});
+		</script>
+		
 	<script defer async>
 		(() => {
 			const loader = document.getElementById('loader');
@@ -337,5 +610,7 @@
 		})();
 	</script>
 	<script  defer async src="assets/js/toggleHamburger.js"></script>
+		<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
