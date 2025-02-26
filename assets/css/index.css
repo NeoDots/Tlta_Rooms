@@ -469,10 +469,11 @@ h2 {
 	}
 	.btn-large {
 		margin-bottom: 1em;
-		margin: auto;
+		margin: 1em auto;
 		font-weight: 700;
 		font-size: 77%;
 		padding: 15px 27px;
+		text-align: center;
 	}
 
 	.horizontal {
