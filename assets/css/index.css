@@ -787,22 +787,13 @@ iframe {
 	/* background-color: green; */
 	width: 33.3%;
 }
-
-
-
-
-/* Review */
-
-
-
-
-
-
-
-
-
-
-
+.contact-box{
+	width: 33.3%;
+	display: flex;
+	float: left;
+	justify-content: center;
+	border: #13ade6  1px;
+}
 
 
 

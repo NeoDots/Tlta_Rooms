@@ -60,7 +60,7 @@ main {
 
 .stacked-image-container {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     margin-top: 1px;
 }
 
@@ -296,7 +296,7 @@ hr {
     
     .stacked-image-container {
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
         margin-top: 1px;
     }
     .rooms {
